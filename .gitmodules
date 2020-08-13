@@ -1,0 +1,3 @@
+[submodule "PruebasGit"]
+	path = PruebasGit
+	url = https://github.com/ChechoSv/PruebasGit.git
