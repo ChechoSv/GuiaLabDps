@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <label>Cantidad (Galones):</label>
+        <input type="text" [(ngModel)]="cantidad">
+                <label>Tipo de gasolina</label>
+                <select [(ngModel)]="opcionSeleccionado" (change)="capturar()">
+                <option value="Selecciona">Selecciona</option>
+                <option *ngFor="let tipoG of tipo" value="{{tipoG}}" >
+                {{tipoG}}
+                </option>
+                </select>
+                <label [hidden]="opcionSeleccionado == 'Selecciona'">Precio Final de Gasolina {{ opcionSeleccionado }} es:
+                    {{valorFinal}}</label>
+        </div>
+
+
+</body>
+</html>

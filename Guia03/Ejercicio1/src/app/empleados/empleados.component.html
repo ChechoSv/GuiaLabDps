@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Datos de Empleado</h1>
+        <p>Ingrese los datos de los Empleados</p>
+        </div>
+        <label>Nombre:</label>
+        <input type="text" [(ngModel)]="nombre">
+        <label>Sueldo:</label>
+        <input type="text" [(ngModel)]="sueldo">
+        <button class="button" (click)="ingresar()">Ingresar</button>
+        <br/><br/>
+        <table [hidden]="contador == 0">
+        <thead>
+        <tr>
+        <th>Nombre</th>
+        <th>Sueldo</th>
+        <th>Sueldo Final</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let templeado of registro">
+            <td>{{templeado.nombre}}</td>
+            <td>{{templeado.sueldo}}</td>
+            <td>{{templeado.sueldoF}}</td>
+            </tr>
+            </tbody>
+            </table>
+</body>
+</html>
